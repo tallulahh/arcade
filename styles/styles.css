@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  /* background-color: lightGray; */
+  font-family: "Raleway";
+}
+
+header {
+  height: 90px;
+  background-color: lightGray;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+  /* position: fixed; */
+  transition: 0.5 all;
+}
+
+.nav-logo h1{
+  position: absolute;
+  left: 0;
+  font-size: 40px;
+  padding: 5px 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px 0;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  /* background: url("https://cdn3.vectorstock.com/i/1000x1000/94/37/arcade-games-neon-sign-game-logo-neon-vector-24989437.jpg"); */
+  background-size: cover;
+  background-position: center;
+  /* background-color: #03011f; */
+  background-color: black;
+}
+
+/* h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  color: white;
+  text-align: center;
+} */
+
+button {
+  border: none;
+  width: 130px;
+  padding: 8px 15px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(42, 50, 113, .28);
+  /* background-color: #03011f; */
+  color: white;
+}
+
+button:hover {
+  background: rgba(42, 50, 113, .5);
+}
+
+.main-carousel {
+  margin: 0 auto;
+  position: relative;
+  left: 0; right: 0;
+  width: 110%;
+  height: 70%;
+  background-color: transparent;
+  cursor: pointer;
+  transform: translateX(-40px);
+}
+
+.carousel-cell {
+  width: 29%;
+  height: 90%;
+  margin-right: 60px;
+  /* bottom: 150px;  */
+  border-radius: 5px;
+  border: 5px solid yellow;
+  opacity: 0.5;
+  z-index: 0;
+  overflow: visible;
+  position: relative;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.home-section img {
+  opacity: 0;
+}
+
+.home-section h3 {
+  position: relative;
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.home-section h3:hover {
+  opacity: 0.6;
+}
+
+.about-section, .home-section{
+  /* padding: 100px 50px; */
+  height: 90vh;
+  line-height: 1.4;
+  width: 100%;
+  position: relative;
+  top:0;
+  left:0;
+}
+
+.about-box {
+  width: 1000px;
+  height: 500px;
+  background-color: black;
+  /* background-image: url("https://i.pinimg.com/474x/86/ce/6c/86ce6c84f9da2fa170e6a897d212815c.jpg");
+  animation: background 10s linear infinite; */
+  border-radius: 10px;
+  border: 5px solid #1222D9;
+  overflow: visible;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+footer {
+  /* background-color: inherit; */
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#tetris {
+  border-radius: 5px;
+}
+
+canvas {
+  border: 5px solid #1222D9;
+  margin: 90px auto;
+  left:0;right:0;
+  position: absolute;
+}
+
+.start,
+.playAgain,
+.gameOver {
+  width: 300px;
+  min-height: 180px;
+  background-color: black;
+  border: 5px solid #1222D9;
+  border-radius: 7px;
+  color: yellow;
+  font-weight: bold;
+  margin: 150px auto;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playAgain, .gameOver {
+  display: none;
+}
+
+.back-btn img {
+  height: 90px;
+  background-color:black;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.games-title {
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  left: 0; right: 0; top: 30px;
+  z-index: 1;
+}
+
+@keyframes background {
+  from  {background-position-y:0px;}
+  to  {background-position-y:450px;}
+}
