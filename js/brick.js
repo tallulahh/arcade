@@ -182,13 +182,13 @@ window.addEventListener("keypress", function(e){
   }
 });
 
-$(".start").on("click", function(){
+$(".start").on("touchend", function(){
   startGame();
   $(".keypad").css("display", "block");
 });
 
 var keypad = document.querySelector(".keypad");
-$(keypad).on("mousedown", "i", function(e){
+$(keypad).on("touchstart mousedown", "i", function(e){
   var id = e.target.id;
 
   switch(id) {
@@ -204,7 +204,7 @@ $(keypad).on("mousedown", "i", function(e){
   // mobileChangeDirection(keyPressed);
 })
 
-$(".keypad").on("mouseup", "i", function(){
+$(".keypad").on("touchend mouseup", "i", function(){
   rightPressed = false;
   leftPressed = false;
 })
