@@ -22,7 +22,7 @@
     t1.to(".home-section button", {
       opacity: 0,
       duration: 0.5
-    })
+    });
     t1.to(".home-section img", {
       opacity: 0,
       duration: 0.5
@@ -40,7 +40,7 @@
     }, {
       opacity: 1,
       duration: 0.2
-    })
+    });
     t1.fromTo(".about-box", {
       opacity: 0,
     }, {
@@ -72,7 +72,8 @@
           ready: function() {
             console.log('Flickity is ready');
           }
-        });
+        }
+    });
     }
 
     function backToGamesRoom() {
